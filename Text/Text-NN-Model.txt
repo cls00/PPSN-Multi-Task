@@ -1,0 +1,46 @@
+﻿Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None,)]                 0         
+                                                                 
+ expand_last_dim (ExpandLast  (None, 1)                0         
+ Dim)                                                            
+                                                                 
+ text_vectorization (TextVec  (None, 64)               0         
+ torization)                                                     
+                                                                 
+ embedding (Embedding)       (None, 64, 128)           640128    
+                                                                 
+ dropout (Dropout)           (None, 64, 128)           0         
+                                                                 
+ conv1d (Conv1D)             (None, 62, 32)            12320     
+                                                                 
+ conv1d_1 (Conv1D)           (None, 60, 32)            3104      
+                                                                 
+ max_pooling1d (MaxPooling1D  (None, 30, 32)           0         
+ )                                                               
+                                                                 
+ conv1d_2 (Conv1D)           (None, 28, 32)            3104      
+                                                                 
+ conv1d_3 (Conv1D)           (None, 26, 32)            3104      
+                                                                 
+ max_pooling1d_1 (MaxPooling  (None, 13, 32)           0         
+ 1D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 416)               0         
+                                                                 
+ dense (Dense)               (None, 32)                13344     
+                                                                 
+ re_lu (ReLU)                (None, 32)                0         
+                                                                 
+ dense_1 (Dense)             (None, 32)                1056      
+                                                                 
+ re_lu_1 (ReLU)              (None, 32)                0         
+                                                                 
+ dense_2 (Dense)             (None, 1)                 33        
+                                                                 
+ classification_head_1 (Acti  (None, 1)                0         
+ vation)                                                         
+                                                                 
+=================================================================
